@@ -1,7 +1,11 @@
 services:
   - type: web
     name: pgweb
-    env: go
+    env: docker
     plan: free
-    buildCommand: go build -o pgweb
-    startCommand: ./pgweb --bind=0.0.0.0 --listen=8080 --host=dpg-d11rb03uibrs73eh87vg-a --port=5432 --user=db_4m_user --pass=xiOe63X4iaczwTAcNfUYwS8oWrDExkHX --database=render_4M
+    dockerfilePath: ""
+    image: sosedoff/pgweb
+    autoDeploy: false
+    envVars:
+      - key: DATABASE_URL
+        value: postgres://boonjun:xiOe63X4iaczwTAcNfUYwS8oWrDExkHX@dpg-d11rb03uibrs73eh87vg-a:5432/render_4m
