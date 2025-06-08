@@ -43,7 +43,7 @@ dev:
 
 build:
 	go build
-        @echo "You can now execute ./pgweb"
+	@echo "You can now execute ./pgweb"
 
 install:
 	go install
