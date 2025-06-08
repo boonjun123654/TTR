@@ -43,10 +43,11 @@ dev:
 
 build:
 	go build
+        @echo "You can now execute ./pgweb"
 
 install:
 	go install
-	
+	@echo "You can now execute pgweb"
 
 release: clean
 	@echo "Building binaries..."
