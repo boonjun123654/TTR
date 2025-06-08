@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: pgweb
+    name: pgweb-console
     env: docker
-    plan: free
-    dockerfilePath: ""
     image: sosedoff/pgweb
+    plan: free
     autoDeploy: false
     envVars:
       - key: DATABASE_URL
