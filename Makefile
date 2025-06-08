@@ -42,12 +42,11 @@ dev:
 	@echo "You can now execute ./pgweb"
 
 build:
-	go build -ldflags '${LDFLAGS}'
-	@echo "You can now execute ./pgweb"
+	go build
 
 install:
-	go install -ldflags '${LDFLAGS}'
-	@echo "You can now execute pgweb"
+	go install
+	
 
 release: clean
 	@echo "Building binaries..."
