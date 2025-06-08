@@ -1,10 +1,13 @@
 services:
   - type: web
-    name: pgweb-console
+    name: pgweb
     env: docker
-    image: sosedoff/pgweb
     plan: free
-    autoDeploy: false
+    repo: <boonjun123654/TTR>
+    branch: main
+    autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        value: postgres://boonjun:xiOe63X4iaczwTAcNfUYwS8oWrDExkHX@dpg-d11rb03uibrs73eh87vg-a:5432/render_4m
+        fromDatabase:
+          name: 4M
+          property: connectionString
